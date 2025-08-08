@@ -15,7 +15,7 @@ form.addEventListener('submit', async (e) => {
 
     const query = e.target.elements['search-text'].value.trim();
     if (!query) {
-        iziToast.warning({
+        izitoast.warning({
             title: 'Attention',
             message: 'Please enter a search query!',
             position: 'topRight',
@@ -29,7 +29,7 @@ form.addEventListener('submit', async (e) => {
         const data = await getImagesByQuery(query);
 
         if (data.hits.length === 0) {
-            iziToast.error({
+            izitoast.error({
                 title: 'No results',
                 message: 'Sorry, there are no images matching your search query. Please try again!',
                 position: 'topRight',
@@ -38,7 +38,7 @@ form.addEventListener('submit', async (e) => {
         }
         createGallery(data.hits);
     } catch (error) {
-        iziToast.error({
+        izitoast.error({
             title: 'Error',
             message: 'Something went wrong. Please try again later.',
             position: 'topRight',

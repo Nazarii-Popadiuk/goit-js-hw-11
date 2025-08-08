@@ -23,10 +23,10 @@ export function createGallery(images) {
     <img src="${webformatURL}" alt="${tags}" />
     </a>
     <div class="info">
-    <p>Likes:${likes}</p>
-    <p>Views:${views}</p>
-    <p>Comments:${comments}</p>
-    <p>Downloads:${downloads}</p>
+    <p>Likes<br>${likes}</p>
+    <p>Views<br>${views}</p>
+    <p>Comments<br>${comments}</p>
+    <p>Downloads<br>${downloads}</p>
     </div>
     </li>`).join('');
     galleryContainer.insertAdjacentHTML('beforeend', markup);
